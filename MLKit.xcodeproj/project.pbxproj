@@ -10,6 +10,11 @@
 		9A0A2EE51D25D2F600E03946 /* MLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A0A2EE41D25D2F600E03946 /* MLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A0A2EEC1D25D2F600E03946 /* MLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0A2EE11D25D2F600E03946 /* MLKit.framework */; };
 		9A0A2EF11D25D2F600E03946 /* MLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A2EF01D25D2F600E03946 /* MLKitTests.swift */; };
+		9A0A2EFE1D25D3E800E03946 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A2EFB1D25D3E800E03946 /* DataManager.swift */; };
+		9A0A2F001D25D3E800E03946 /* SimpleLinearRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A2EFD1D25D3E800E03946 /* SimpleLinearRegression.swift */; };
+		9A0A2F261D25D65D00E03946 /* SwiftCSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0A2F071D25D4E700E03946 /* SwiftCSV.framework */; };
+		9A0A2F271D25D66000E03946 /* Upsurge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0A2F181D25D4ED00E03946 /* Upsurge.framework */; };
+		9AF95EB51D27891800960C35 /* PolynomialRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF95EB41D27891800960C35 /* PolynomialRegression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,6 +25,62 @@
 			remoteGlobalIDString = 9A0A2EE01D25D2F500E03946;
 			remoteInfo = MLKit;
 		};
+		9A0A2F061D25D4E700E03946 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A0A2F011D25D4E700E03946 /* SwiftCSV.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D1E59B41945FFAC001CF760;
+			remoteInfo = SwiftCSV;
+		};
+		9A0A2F081D25D4E700E03946 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A0A2F011D25D4E700E03946 /* SwiftCSV.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D1E59BF1945FFAD001CF760;
+			remoteInfo = SwiftCSVTests;
+		};
+		9A0A2F131D25D4ED00E03946 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 614ACA701BD1CB7B00A1C13E;
+			remoteInfo = "Upsurge OSX";
+		};
+		9A0A2F151D25D4ED00E03946 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 614ACA7A1BD1CB7B00A1C13E;
+			remoteInfo = "UpsurgeTests OSX";
+		};
+		9A0A2F171D25D4ED00E03946 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 614ACACA1BD1CBF300A1C13E;
+			remoteInfo = "Upsurge iOS";
+		};
+		9A0A2F191D25D4ED00E03946 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 614ACAD31BD1CBF300A1C13E;
+			remoteInfo = "UpsurgeTests iOS";
+		};
+		9A0A2F1B1D25D4ED00E03946 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 61D0466D1C48BA5B00DB7279;
+			remoteInfo = "Upsurge tvOS";
+		};
+		9A0A2F1D1D25D4ED00E03946 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 61D046761C48BA5B00DB7279;
+			remoteInfo = "UpsurgeTests tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +90,11 @@
 		9A0A2EEB1D25D2F600E03946 /* MLKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0A2EF01D25D2F600E03946 /* MLKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLKitTests.swift; sourceTree = "<group>"; };
 		9A0A2EF21D25D2F600E03946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A0A2EFB1D25D3E800E03946 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../DataManager.swift; sourceTree = "<group>"; };
+		9A0A2EFD1D25D3E800E03946 /* SimpleLinearRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleLinearRegression.swift; path = ../SimpleLinearRegression.swift; sourceTree = "<group>"; };
+		9A0A2F011D25D4E700E03946 /* SwiftCSV.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftCSV.xcodeproj; path = Carthage/Checkouts/SwiftCSV/SwiftCSV.xcodeproj; sourceTree = "<group>"; };
+		9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Upsurge.xcodeproj; path = Carthage/Checkouts/Upsurge/Upsurge.xcodeproj; sourceTree = "<group>"; };
+		9AF95EB41D27891800960C35 /* PolynomialRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolynomialRegression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A0A2F271D25D66000E03946 /* Upsurge.framework in Frameworks */,
+				9A0A2F261D25D65D00E03946 /* SwiftCSV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +121,7 @@
 		9A0A2ED71D25D2F500E03946 = {
 			isa = PBXGroup;
 			children = (
+				9A0A2F291D25D6A200E03946 /* Frameworks */,
 				9A0A2EE31D25D2F600E03946 /* MLKit */,
 				9A0A2EEF1D25D2F600E03946 /* MLKitTests */,
 				9A0A2EE21D25D2F600E03946 /* Products */,
@@ -71,6 +140,7 @@
 		9A0A2EE31D25D2F600E03946 /* MLKit */ = {
 			isa = PBXGroup;
 			children = (
+				9AEA73611D287B3900FBCE73 /* Classes */,
 				9A0A2EE41D25D2F600E03946 /* MLKit.h */,
 				9A0A2EE61D25D2F600E03946 /* Info.plist */,
 			);
@@ -84,6 +154,47 @@
 				9A0A2EF21D25D2F600E03946 /* Info.plist */,
 			);
 			path = MLKitTests;
+			sourceTree = "<group>";
+		};
+		9A0A2F021D25D4E700E03946 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A0A2F071D25D4E700E03946 /* SwiftCSV.framework */,
+				9A0A2F091D25D4E700E03946 /* SwiftCSVTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A0A2F0B1D25D4ED00E03946 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A0A2F141D25D4ED00E03946 /* Upsurge.framework */,
+				9A0A2F161D25D4ED00E03946 /* UpsurgeTests OSX.xctest */,
+				9A0A2F181D25D4ED00E03946 /* Upsurge.framework */,
+				9A0A2F1A1D25D4ED00E03946 /* UpsurgeTests iOS.xctest */,
+				9A0A2F1C1D25D4ED00E03946 /* Upsurge.framework */,
+				9A0A2F1E1D25D4ED00E03946 /* UpsurgeTests tvOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A0A2F291D25D6A200E03946 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */,
+				9A0A2F011D25D4E700E03946 /* SwiftCSV.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AEA73611D287B3900FBCE73 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9A0A2EFB1D25D3E800E03946 /* DataManager.swift */,
+				9A0A2EFD1D25D3E800E03946 /* SimpleLinearRegression.swift */,
+				9AF95EB41D27891800960C35 /* PolynomialRegression.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +275,16 @@
 			mainGroup = 9A0A2ED71D25D2F500E03946;
 			productRefGroup = 9A0A2EE21D25D2F600E03946 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9A0A2F021D25D4E700E03946 /* Products */;
+					ProjectRef = 9A0A2F011D25D4E700E03946 /* SwiftCSV.xcodeproj */;
+				},
+				{
+					ProductGroup = 9A0A2F0B1D25D4ED00E03946 /* Products */;
+					ProjectRef = 9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9A0A2EE01D25D2F500E03946 /* MLKit */,
@@ -171,6 +292,65 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9A0A2F071D25D4E700E03946 /* SwiftCSV.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftCSV.framework;
+			remoteRef = 9A0A2F061D25D4E700E03946 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A0A2F091D25D4E700E03946 /* SwiftCSVTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftCSVTests.xctest;
+			remoteRef = 9A0A2F081D25D4E700E03946 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A0A2F141D25D4ED00E03946 /* Upsurge.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Upsurge.framework;
+			remoteRef = 9A0A2F131D25D4ED00E03946 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A0A2F161D25D4ED00E03946 /* UpsurgeTests OSX.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UpsurgeTests OSX.xctest";
+			remoteRef = 9A0A2F151D25D4ED00E03946 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A0A2F181D25D4ED00E03946 /* Upsurge.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Upsurge.framework;
+			remoteRef = 9A0A2F171D25D4ED00E03946 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A0A2F1A1D25D4ED00E03946 /* UpsurgeTests iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UpsurgeTests iOS.xctest";
+			remoteRef = 9A0A2F191D25D4ED00E03946 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A0A2F1C1D25D4ED00E03946 /* Upsurge.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Upsurge.framework;
+			remoteRef = 9A0A2F1B1D25D4ED00E03946 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A0A2F1E1D25D4ED00E03946 /* UpsurgeTests tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UpsurgeTests tvOS.xctest";
+			remoteRef = 9A0A2F1D1D25D4ED00E03946 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9A0A2EDF1D25D2F500E03946 /* Resources */ = {
@@ -194,6 +374,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF95EB51D27891800960C35 /* PolynomialRegression.swift in Sources */,
+				9A0A2F001D25D3E800E03946 /* SimpleLinearRegression.swift in Sources */,
+				9A0A2EFE1D25D3E800E03946 /* DataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +493,7 @@
 		9A0A2EF61D25D2F600E03946 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -320,12 +504,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.somnibyte.MLKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		9A0A2EF71D25D2F600E03946 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -378,6 +564,7 @@
 				9A0A2EF71D25D2F600E03946 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A0A2EF81D25D2F600E03946 /* Build configuration list for PBXNativeTarget "MLKitTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +573,7 @@
 				9A0A2EFA1D25D2F600E03946 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

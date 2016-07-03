@@ -1,0 +1,6 @@
+[submodule "Carthage/Checkouts/Upsurge"]
+	path = Carthage/Checkouts/Upsurge
+	url = https://github.com/aleph7/Upsurge.git
+[submodule "Carthage/Checkouts/SwiftCSV"]
+	path = Carthage/Checkouts/SwiftCSV
+	url = https://github.com/naoty/SwiftCSV.git
