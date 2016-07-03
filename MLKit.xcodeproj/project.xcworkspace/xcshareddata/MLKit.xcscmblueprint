@@ -1,20 +1,28 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "04783FFBB6047DAA5E639D21B69F45A64D6CB19A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "3BF49EDF5038795EBFAFA8578150CD385BA00EB4" : 0,
-    "9F65A476A58933AE6B22EAE730A194955F98FC66" : 0
+    "9F65A476A58933AE6B22EAE730A194955F98FC66" : 0,
+    "04783FFBB6047DAA5E639D21B69F45A64D6CB19A" : 0,
+    "3BF49EDF5038795EBFAFA8578150CD385BA00EB4" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8ADE62C1-CA77-40B9-9DB3-8F86EF3E80A4",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "3BF49EDF5038795EBFAFA8578150CD385BA00EB4" : "MLKit\/Carthage\/Checkouts\/SwiftCSV\/",
-    "9F65A476A58933AE6B22EAE730A194955F98FC66" : "MLKit\/Carthage\/Checkouts\/Upsurge\/"
+    "9F65A476A58933AE6B22EAE730A194955F98FC66" : "MLKit\/Carthage\/Checkouts\/Upsurge\/",
+    "04783FFBB6047DAA5E639D21B69F45A64D6CB19A" : "MLKit\/",
+    "3BF49EDF5038795EBFAFA8578150CD385BA00EB4" : "MLKit\/Carthage\/Checkouts\/SwiftCSV\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "MLKit",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MLKit.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Somnibyte\/MLKit.git\/",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "04783FFBB6047DAA5E639D21B69F45A64D6CB19A"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/naoty\/SwiftCSV.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",

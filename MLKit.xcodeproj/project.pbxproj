@@ -10,11 +10,11 @@
 		9A0A2EE51D25D2F600E03946 /* MLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A0A2EE41D25D2F600E03946 /* MLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A0A2EEC1D25D2F600E03946 /* MLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0A2EE11D25D2F600E03946 /* MLKit.framework */; };
 		9A0A2EF11D25D2F600E03946 /* MLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A2EF01D25D2F600E03946 /* MLKitTests.swift */; };
-		9A0A2EFE1D25D3E800E03946 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A2EFB1D25D3E800E03946 /* DataManager.swift */; };
-		9A0A2F001D25D3E800E03946 /* SimpleLinearRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A2EFD1D25D3E800E03946 /* SimpleLinearRegression.swift */; };
 		9A0A2F261D25D65D00E03946 /* SwiftCSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0A2F071D25D4E700E03946 /* SwiftCSV.framework */; };
 		9A0A2F271D25D66000E03946 /* Upsurge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0A2F181D25D4ED00E03946 /* Upsurge.framework */; };
-		9AF95EB51D27891800960C35 /* PolynomialRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF95EB41D27891800960C35 /* PolynomialRegression.swift */; };
+		9AEA73B71D28F05800FBCE73 /* SimpleLinearRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA73B61D28F05800FBCE73 /* SimpleLinearRegression.swift */; };
+		9AEA73EF1D28F28D00FBCE73 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA73EE1D28F28D00FBCE73 /* DataManager.swift */; };
+		9AEA73F11D28F29100FBCE73 /* PolynomialRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA73F01D28F29100FBCE73 /* PolynomialRegression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,11 +90,11 @@
 		9A0A2EEB1D25D2F600E03946 /* MLKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0A2EF01D25D2F600E03946 /* MLKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLKitTests.swift; sourceTree = "<group>"; };
 		9A0A2EF21D25D2F600E03946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A0A2EFB1D25D3E800E03946 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../DataManager.swift; sourceTree = "<group>"; };
-		9A0A2EFD1D25D3E800E03946 /* SimpleLinearRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleLinearRegression.swift; path = ../SimpleLinearRegression.swift; sourceTree = "<group>"; };
 		9A0A2F011D25D4E700E03946 /* SwiftCSV.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftCSV.xcodeproj; path = Carthage/Checkouts/SwiftCSV/SwiftCSV.xcodeproj; sourceTree = "<group>"; };
 		9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Upsurge.xcodeproj; path = Carthage/Checkouts/Upsurge/Upsurge.xcodeproj; sourceTree = "<group>"; };
-		9AF95EB41D27891800960C35 /* PolynomialRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolynomialRegression.swift; sourceTree = "<group>"; };
+		9AEA73B61D28F05800FBCE73 /* SimpleLinearRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleLinearRegression.swift; sourceTree = "<group>"; };
+		9AEA73EE1D28F28D00FBCE73 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9AEA73F01D28F29100FBCE73 /* PolynomialRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolynomialRegression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +140,9 @@
 		9A0A2EE31D25D2F600E03946 /* MLKit */ = {
 			isa = PBXGroup;
 			children = (
-				9AEA73611D287B3900FBCE73 /* Classes */,
+				9AEA73EE1D28F28D00FBCE73 /* DataManager.swift */,
+				9AEA73F01D28F29100FBCE73 /* PolynomialRegression.swift */,
+				9AEA73B61D28F05800FBCE73 /* SimpleLinearRegression.swift */,
 				9A0A2EE41D25D2F600E03946 /* MLKit.h */,
 				9A0A2EE61D25D2F600E03946 /* Info.plist */,
 			);
@@ -185,16 +187,6 @@
 				9A0A2F011D25D4E700E03946 /* SwiftCSV.xcodeproj */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9AEA73611D287B3900FBCE73 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				9A0A2EFB1D25D3E800E03946 /* DataManager.swift */,
-				9A0A2EFD1D25D3E800E03946 /* SimpleLinearRegression.swift */,
-				9AF95EB41D27891800960C35 /* PolynomialRegression.swift */,
-			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,9 +366,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AF95EB51D27891800960C35 /* PolynomialRegression.swift in Sources */,
-				9A0A2F001D25D3E800E03946 /* SimpleLinearRegression.swift in Sources */,
-				9A0A2EFE1D25D3E800E03946 /* DataManager.swift in Sources */,
+				9AEA73F11D28F29100FBCE73 /* PolynomialRegression.swift in Sources */,
+				9AEA73B71D28F05800FBCE73 /* SimpleLinearRegression.swift in Sources */,
+				9AEA73EF1D28F28D00FBCE73 /* DataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
