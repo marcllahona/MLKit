@@ -10,6 +10,7 @@
 ## Up Next
 - [ ] Unit tests for SimpleLinearRegression and PolynomialRegression classes
 - [ ] More comments on code for extra details 
+- [ ] Example Project 
 - [ ] Ridge Regression
 - [ ] Lasso Regression
 - [ ] Built in support for reading CSV files using [SwiftCSV](https://github.com/naoty/SwiftCSV)
