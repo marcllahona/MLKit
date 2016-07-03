@@ -8,6 +8,8 @@
 - [x] Polynomial Regression (Allows for multiple features)
 
 ## Up Next
+- [ ] Unit tests for SimpleLinearRegression and PolynomialRegression classes
+- [ ] More comments on code for extra details 
 - [ ] Ridge Regression
 - [ ] Lasso Regression
 - [ ] Built in support for reading CSV files using SwiftCSV 
