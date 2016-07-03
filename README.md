@@ -12,7 +12,7 @@
 - [ ] More comments on code for extra details 
 - [ ] Ridge Regression
 - [ ] Lasso Regression
-- [ ] Built in support for reading CSV files using SwiftCSV 
+- [ ] Built in support for reading CSV files using [SwiftCSV](https://github.com/naoty/SwiftCSV)
 
 
 # License
