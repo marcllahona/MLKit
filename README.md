@@ -5,7 +5,7 @@
 
 - [x] Matrix and Vector Operations (uses [Upsurge framework](https://github.com/aleph7/Upsurge))
 - [x] Simple Linear Regression (Allows for 1 feature set)
-- [x] SPolynomial Regression (Allows for multiple features)
+- [x] Polynomial Regression (Allows for multiple features)
 
 ## Up Next
 - [ ] Ridge Regression
