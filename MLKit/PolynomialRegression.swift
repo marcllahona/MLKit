@@ -87,7 +87,7 @@ public class PolynomialLinearRegression {
         }
         
         
-        // First get the predictions 
+        // First get the predictions
         let y_actual = observation
         let feature_matrix_and_output = MLDataManager.dataToMatrix(features, output: observation)
         let feature_matrix = feature_matrix_and_output.0
@@ -99,7 +99,7 @@ public class PolynomialLinearRegression {
         // Then square and add them up
         var result = dot(error, error)
         
-        // Set cost function 
+        // Set cost function
         self.cost_function_result = result
         
         return result
