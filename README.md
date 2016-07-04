@@ -1,3 +1,23 @@
+# MLKit (a.k.a Machine Learning Kit) 🤖
+[WIP] A simple Machine Learning framework written in Swift
+
+## Features (So Far)
+
+- [x] Matrix and Vector Operations (uses [Upsurge framework](https://github.com/aleph7/Upsurge))
+- [x] Simple Linear Regression (Allows for 1 feature set)
+- [x] Polynomial Regression (Allows for multiple features)
+
+## Up Next
+- [ ] Polynomial Regression Cost Function (RSS) (Coming Soon!)
+- [ ] Unit tests for SimpleLinearRegression and PolynomialRegression classes
+- [ ] More comments on code for extra details 
+- [ ] Example Project 
+- [ ] Ridge Regression
+- [ ] Lasso Regression
+- [ ] Built in support for reading CSV files using [SwiftCSV](https://github.com/naoty/SwiftCSV)
+
+
+# License
 MIT License
 
 Copyright (c) 2016 Guled Ahmed
