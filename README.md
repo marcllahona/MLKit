@@ -8,6 +8,7 @@
 - [x] Polynomial Regression (Allows for multiple features)
 
 ## Up Next
+- [ ] Polynomial Regression Cost Function (RSS) (Coming Soon!)
 - [ ] Unit tests for SimpleLinearRegression and PolynomialRegression classes
 - [ ] More comments on code for extra details 
 - [ ] Example Project 
