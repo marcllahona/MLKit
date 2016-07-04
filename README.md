@@ -1,4 +1,4 @@
-# MLKit 🤖
+# MLKit (a.k.a Machine Learning Kit) 🤖
 [WIP] A simple Machine Learning framework written in Swift
 
 ## Features (So Far)
