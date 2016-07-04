@@ -6,12 +6,19 @@
 //  Copyright © 2016 Somnibyte. All rights reserved.
 //
 
+
+// I NEED TO MAKE 
+// RSS 
+// POLYNOMIAL DEGREE FEATURE WHEN I LEARN ABOUT THE DISCRETE FEATURE STUFF [ DONE THROUGH MLDATAMANAGER
+
+
 import Foundation
 import Upsurge
 
 public class PolynomialLinearRegression {
     
     public var cost_function_result:Float!
+    public var weights:Matrix<Float>!
     
     public init(){
         cost_function_result = 0.0
@@ -64,8 +71,38 @@ public class PolynomialLinearRegression {
             }
         }
         
+        // Set weights 
+        self.weights = weights
         
         return weights
+    }
+    
+    
+    
+    public func RSS(features:[Array<Float>], observation: Array<Float>) -> Float {
+        // Check if the users model has fit to their data
+        if self.weights == nil {
+            print("You need to have fit a model first before computing the RSS/Cost Function.")
+            return Float(-1)
+        }
+        
+        
+        // First get the predictions 
+        let y_actual = observation
+        let feature_matrix_and_output = MLDataManager.dataToMatrix(features, output: observation)
+        let feature_matrix = feature_matrix_and_output.0
+        let y_predicted = predictEntireMatrixOfFeatures(feature_matrix, weights: self.weights)
+        
+        // Then compute the residuals/errors
+        let error:ValueArray<Float> = (y_actual - y_predicted)
+        
+        // Then square and add them up
+        var result = dot(error, error)
+        
+        // Set cost function 
+        self.cost_function_result = result
+        
+        return result
     }
 
     public func predict(input_vector:ValueArray<Float>, weights:ValueArray<Float>) -> Float {
