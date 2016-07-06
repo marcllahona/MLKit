@@ -40,7 +40,8 @@ extension UInt64: NumericType { }
 public class MLDataManager {
 
     enum MLDataHandelingError: ErrorType {
-
+        case noData
+        case incorrectFraction
     }
 
     /**
@@ -104,6 +105,54 @@ public class MLDataManager {
         let feature_matrix = Matrix<Float>(matrix_as_array)
 
         return (feature_matrix, output_matrix.elements)
+    }
+
+    /**
+     A method that takes in a string of arrays (if you read your data in from a CSV file) and converts it into an array of Float values.
+
+     - parameter data: A string array.
+
+     - returns: An array of type Float.
+     */
+    public static func convertMyDataToFloat(data: Array<String>) throws -> Array<Float> {
+
+        if data.count == 0 {
+            throw MLDataHandelingError.noData
+        }
+
+        let float_data: Array<Float> = data.map { Float($0)! }
+        return float_data
+    }
+
+    /**
+     The split data method allows you to split your original data into training and testing sets (or training,validation, and testing sets). The method takes in your data
+     and a fraction and splits your data based on the fraction you specify. So for example if you chose 0.5 (50%), you would get a tuple containing two halves of your data.
+
+     - parameter data: An array of your float data
+     - parameter fraction: The amount you want to split the data.
+
+     - returns: A tuple that contains your split data. The first entry of your tuple (0) will contain the fraction of data you specified, and the last entry of your tuple (1) will
+     contain whatever data is left.
+     */
+    public static func splitData(data: Array<Float>, fraction: Float) throws -> (Array<Float>, Array<Float>) {
+
+        if data.count == 0 {
+            throw MLDataHandelingError.noData
+        }
+
+        if (fraction == 1.0 || fraction == 0.0 || fraction >= 1.0) {
+            print("Your fraction must be between 1.0 and 0.0")
+            throw MLDataHandelingError.incorrectFraction
+        }
+
+        let dataCount = Float(data.count)
+        let split = Int(fraction * dataCount)
+        let firstPortion = data[0 ..< split]
+        let secondPortion = data[split ..< data.count]
+        let firstPortionAsArray = Array(firstPortion)
+        let secondPortionAsArray = Array(secondPortion)
+
+        return (firstPortionAsArray, secondPortionAsArray)
     }
 
 }
