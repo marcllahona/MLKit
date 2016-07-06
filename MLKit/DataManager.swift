@@ -10,8 +10,10 @@ import Foundation
 import Upsurge
 
 /**
+ 
  The Numeric Type Protocol allows for generic functions
  to take in integers or doubles or floats.
+ 
 */
 public protocol NumericType {
     func +(lhs: Self, rhs: Self) -> Self
@@ -46,12 +48,11 @@ public class MLDataManager{
     
     
     /**
-     Description Goes Here
+     The sumUpData method takes in array of numbers (of any type using the NumericType protocol) and computes the sum of all the numbers in the array.
      
-     @param
+     - parameter data: An array of numbers.
      
-     @return 
-     
+     - returns: The sum of the array
      */
     public static func sumUpData<T: NumericType> (data: Array<T>) -> T {
         var sum = T(0)
@@ -62,12 +63,11 @@ public class MLDataManager{
     }
     
     /**
-     Description Goes Here
+     The mean method calculates the mean of an array of numbers (of any type using the NumericType protocol).
      
-     @param
+     - parameter data: An array of numbers.
      
-     @return
-     
+     - returns: The mean of the array
      */
     public static func mean<T: NumericType> (data: Array<T>) -> T {
         let totalSum = sumUpData(data)
@@ -75,6 +75,18 @@ public class MLDataManager{
         return totalSum/totalAmountOfData
     }
     
+    
+    
+    /**
+     The dataToMatrix method takes an array of features (which contain your data of a specific feature), along with your observations/output
+     and turns your features into a Matrix of type Float and your output into an array in order to be processed by machine learning algorithms 
+     such as calculating the RSS/cost function for Regression.
+     
+     - parameter features: An array of your features (which are suppose to be arrays as well). 
+     - parameter output: An array of your observations/output.
+     
+     - returns: A tuple that consists of a matrix and a array of type ValueArray
+     */
     public static func dataToMatrix (features:[Array<Float>], output: Array<Float>) -> (Matrix<Float>,ValueArray<Float>) {
         
         

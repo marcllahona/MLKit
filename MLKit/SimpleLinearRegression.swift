@@ -22,6 +22,18 @@ public class SimpleLinearRegression{
         cost_function_result = 0.0
     }
     
+    
+    /**
+     The fitUsingGradientDescent method fits your model (that consists of one feature and one output array) and returns your regression coefficients/weights. The methods applies gradient descent
+     as a means to find the most optimal regression coefficients for your model.
+     
+     - parameter inputFeature: An array of your feature. Only 1 feature is allowed. This class is used for simple experiments in which only 1 feature is allowed.
+     - parameter output: An array of your observations/output.
+     - parameter step_size: The amount of "steps" you want to take in the gradient descent process.
+     - parameter tolerance: The stopping point. Since it might take awhile to hit 0 you can set a tolerance to stop at a specific point.
+     
+     - returns: A tuple of your slope and intercept (your regression coefficients).
+     */
     public func fitUsingGradientDescent (inputFeature:Array<Float>, output:Array<Float>, step_size: Float, tolerance: Float) -> (Float, Float){
         
         
@@ -111,6 +123,14 @@ public class SimpleLinearRegression{
     }
     
     
+    /**
+     The fitUsingNoGradientDescent method fits your model by taking the derivative of the residual sum of squares formula (An .md file with the intuition behind this approach will be provided soon) and solves for your regression coefficients.
+     
+     - parameter inputFeature: An array of your feature. Only 1 feature is allowed. This class is used for simple experiments in which only 1 feature is allowed.
+     - parameter output: An array of your observations/output.
+
+     - returns: A tuple of your slope and intercept (your regression coefficients).
+     */
     public func fitUsingNoGradientDescent (inputFeature:Array<Float>, output:Array<Float> ) -> (Float, Float){
         
         
@@ -159,6 +179,18 @@ public class SimpleLinearRegression{
         return (slope, intercept)
     }
     
+    
+    /**
+     The RSS method computes the residual sum of squares or the cost function of your model.
+     
+     - parameter inputFeature: An array of your feature. Only 1 feature is allowed. This class is used for simple experiments in which only 1 feature is allowed.
+     - parameter output: An array of your observations/output.
+     - parameter intercept: Your intercept weight (of type Float).
+     - parameter slope: your slope weight (of type Float).
+     
+     - returns: The cost of your model (a.k.a The Residual Sum of Squares).
+     
+     */
     public func RSS (inputFeature: Array<Float>, output:Array<Float>, intercept:Float, slope: Float) -> Float {
         var sum = Float(0.0)
         for (i, _) in inputFeature.enumerate() {
@@ -173,6 +205,15 @@ public class SimpleLinearRegression{
         return sum
     }
     
+    /**
+     The predict method is used for making one-time predictions by passing your intercept weight, slope weight, and an input value. 
+     
+     - parameter intercept: Your intercept weight (of type Float).
+     - parameter slope: your slope weight (of type Float).
+     - paramter inputValue: An input value. 
+     
+     - returns: A prediction (of type Float).
+     */
     public func predict (intercept: Float, slope: Float, inputValue: Float) -> Float {
         let y_hat = intercept + slope * inputValue
         return y_hat
