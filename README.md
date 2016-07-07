@@ -6,9 +6,9 @@
 - [x] Matrix and Vector Operations (uses [Upsurge framework](https://github.com/aleph7/Upsurge))
 - [x] Simple Linear Regression (Allows for 1 feature set)
 - [x] Polynomial Regression (Allows for multiple features)
+- [x] Allows for splitting your data into training, validation, and test sets. 
 
 ## Up Next
-- [x] Polynomial Regression Cost Function (RSS) (Coming Soon!)
 - [ ] Unit tests for SimpleLinearRegression and PolynomialRegression classes
 - [ ] Example Project 
 - [ ] Ridge Regression
