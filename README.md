@@ -13,7 +13,7 @@
 - [ ] Example Project 
 - [ ] Ridge Regression
 - [ ] Lasso Regression
-- [ ] Built in support for reading CSV files using [SwiftCSV](https://github.com/naoty/SwiftCSV)
+
 
 
 # License
