@@ -31,17 +31,12 @@ public class SimpleLinearRegression {
 
      - returns: A tuple of your slope and intercept (your regression coefficients).
      */
-    public func fitUsingGradientDescent (inputFeature: Array<Float>, output: Array<Float>, step_size: Float, tolerance: Float) -> (Float, Float) {
-
-        if (inputFeature.count == 0 || output.count == 0) {
-            print("You need to have 1 feature array and 1 output array to utilize this function.")
-            return (Float(-1), Float(-1))
-        }
+    public func fitUsingGradientDescent (inputFeature: Array<Float>, output: Array<Float>, step_size: Float, tolerance: Float) throws -> (Float, Float) {
 
         if (inputFeature.count != output.count) {
 
             print("The length of your input feature data and your output must be the same in order to utilize this function.")
-            return (Float(-1), Float(-1))
+            throw RegressionError.lengthOfDataArrayNotEqual
         }
 
         var converged = false // Convergence Boolean

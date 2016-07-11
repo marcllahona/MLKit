@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A05A6391D2DE0FE0003E131 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05A6381D2DE0FE0003E131 /* Protocols.swift */; };
+		9A05A6391D2DE0FE0003E131 /* NumericTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05A6381D2DE0FE0003E131 /* NumericTypeProtocol.swift */; };
 		9A05A6431D2DE19E0003E131 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05A6421D2DE19E0003E131 /* Extensions.swift */; };
+		9A05A68F1D3323750003E131 /* RidgeRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05A68E1D3323750003E131 /* RidgeRegression.swift */; };
+		9A05A6931D3345C10003E131 /* RegressionErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05A6921D3345C10003E131 /* RegressionErrorEnum.swift */; };
 		9A0A2EE51D25D2F600E03946 /* MLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A0A2EE41D25D2F600E03946 /* MLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A0A2EEC1D25D2F600E03946 /* MLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0A2EE11D25D2F600E03946 /* MLKit.framework */; };
 		9A0A2EF11D25D2F600E03946 /* MLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A2EF01D25D2F600E03946 /* MLKitTests.swift */; };
@@ -86,8 +88,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9A05A6381D2DE0FE0003E131 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		9A05A6381D2DE0FE0003E131 /* NumericTypeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericTypeProtocol.swift; sourceTree = "<group>"; };
 		9A05A6421D2DE19E0003E131 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9A05A68E1D3323750003E131 /* RidgeRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidgeRegression.swift; sourceTree = "<group>"; };
+		9A05A6921D3345C10003E131 /* RegressionErrorEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegressionErrorEnum.swift; sourceTree = "<group>"; };
 		9A0A2EE11D25D2F600E03946 /* MLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0A2EE41D25D2F600E03946 /* MLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLKit.h; sourceTree = "<group>"; };
 		9A0A2EE61D25D2F600E03946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,10 +149,12 @@
 			isa = PBXGroup;
 			children = (
 				9AEA73EE1D28F28D00FBCE73 /* DataManager.swift */,
-				9AEA73F01D28F29100FBCE73 /* PolynomialRegression.swift */,
-				9AEA73B61D28F05800FBCE73 /* SimpleLinearRegression.swift */,
-				9A05A6381D2DE0FE0003E131 /* Protocols.swift */,
+				9A05A6921D3345C10003E131 /* RegressionErrorEnum.swift */,
+				9A05A6381D2DE0FE0003E131 /* NumericTypeProtocol.swift */,
 				9A05A6421D2DE19E0003E131 /* Extensions.swift */,
+				9A05A68E1D3323750003E131 /* RidgeRegression.swift */,
+				9AEA73B61D28F05800FBCE73 /* SimpleLinearRegression.swift */,
+				9AEA73F01D28F29100FBCE73 /* PolynomialRegression.swift */,
 				9A0A2EE41D25D2F600E03946 /* MLKit.h */,
 				9A0A2EE61D25D2F600E03946 /* Info.plist */,
 			);
@@ -374,9 +380,11 @@
 			files = (
 				9A05A6431D2DE19E0003E131 /* Extensions.swift in Sources */,
 				9AEA73F11D28F29100FBCE73 /* PolynomialRegression.swift in Sources */,
+				9A05A68F1D3323750003E131 /* RidgeRegression.swift in Sources */,
+				9A05A6931D3345C10003E131 /* RegressionErrorEnum.swift in Sources */,
 				9AEA73B71D28F05800FBCE73 /* SimpleLinearRegression.swift in Sources */,
 				9AEA73EF1D28F28D00FBCE73 /* DataManager.swift in Sources */,
-				9A05A6391D2DE0FE0003E131 /* Protocols.swift in Sources */,
+				9A05A6391D2DE0FE0003E131 /* NumericTypeProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
