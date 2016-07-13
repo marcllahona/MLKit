@@ -12,7 +12,7 @@ import Upsurge
 public class PolynomialLinearRegression {
 
     public var cost_function_result: Float!
-    public var weights: Matrix<Float>!
+    public var final_weights: Matrix<Float>!
 
     public init() {
         cost_function_result = 0.0
@@ -64,7 +64,7 @@ public class PolynomialLinearRegression {
 
         while !converged {
 
-            predictions = predictEntireMatrixOfFeatures(feature_matrix, weights: weights)
+            predictions = predictEntireMatrixOfFeatures(feature_matrix, your_weights: weights)
             errors = output_vector - predictions
 
             gradient_sum_of_squares = Float(0.0)
@@ -86,7 +86,7 @@ public class PolynomialLinearRegression {
         }
 
         // Set weights
-        self.weights = weights
+        self.final_weights = weights
 
         return weights
     }
@@ -100,7 +100,7 @@ public class PolynomialLinearRegression {
      */
     public func RSS(features: [Array<Float>], observation: Array<Float>) throws -> Float {
         // Check if the users model has fit to their data
-        if self.weights == nil {
+        if self.final_weights == nil {
             print("You need to have fit a model first before computing the RSS/Cost Function.")
             throw RegressionError.modelHasNotBeenFit
         }
@@ -109,7 +109,7 @@ public class PolynomialLinearRegression {
         let y_actual = observation
         let feature_matrix_and_output = MLDataManager.dataToMatrix(features, output: observation)
         let feature_matrix = feature_matrix_and_output.0
-        let y_predicted = predictEntireMatrixOfFeatures(feature_matrix, weights: self.weights)
+        let y_predicted = predictEntireMatrixOfFeatures(feature_matrix, your_weights: self.final_weights)
 
         // Then compute the residuals/errors
         let error: ValueArray<Float> = (y_actual - y_predicted)
@@ -131,9 +131,9 @@ public class PolynomialLinearRegression {
      - parameter weights: An array of your weights. This can be obtained by fitting your model before getting a prediction.
      - returns: A prediction (of type Float).
      */
-    public func predict(input_vector: ValueArray<Float>, weights: ValueArray<Float>) -> Float {
+    public func predict(input_vector: ValueArray<Float>, your_weights: ValueArray<Float>) -> Float {
 
-        let prediction: Float = input_vector • weights
+        let prediction: Float = input_vector • your_weights
 
         return prediction
     }
@@ -146,9 +146,9 @@ public class PolynomialLinearRegression {
      - parameter weights: A matrix that consists of your weights.
      - returns: An array of predictions (of type Float)
      */
-    public func predictEntireMatrixOfFeatures(input_matrix: Matrix<Float>, weights: Matrix<Float>) -> ValueArray<Float> {
+    public func predictEntireMatrixOfFeatures(input_matrix: Matrix<Float>, your_weights: Matrix<Float>) -> ValueArray<Float> {
 
-        let predictions = input_matrix * weights
+        let predictions = input_matrix * your_weights
 
         return predictions.elements
     }
