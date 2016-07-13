@@ -6,13 +6,15 @@
 - [x] Matrix and Vector Operations (uses [Upsurge framework](https://github.com/aleph7/Upsurge))
 - [x] Simple Linear Regression (Allows for 1 feature set)
 - [x] Polynomial Regression (Allows for multiple features)
+- [x] Ridge Regression
 - [x] Allows for splitting your data into training, validation, and test sets. 
 
 ## Up Next
-- [ ] Unit tests for SimpleLinearRegression and PolynomialRegression classes
+- [ ] K-Fold Cross Validation & finding best L2 Penalty for RidgeRegression methods
+- [ ] Unit tests for SimpleLinearRegression , PolynomialRegression, and  RidgeRegression class
 - [ ] Example Project 
-- [ ] Ridge Regression
 - [ ] Lasso Regression
+
 
 
 
