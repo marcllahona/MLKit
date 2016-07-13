@@ -11,7 +11,6 @@
 - [x] K-Fold Cross Validation & Ability to test various L2 penalties for Ridge Regression
 
 ## Up Next
-- [ ] K-Fold Cross Validation & finding best L2 Penalty for RidgeRegression methods
 - [ ] Unit tests for SimpleLinearRegression , PolynomialRegression, and  RidgeRegression class
 - [ ] Example Project 
 - [ ] Lasso Regression
