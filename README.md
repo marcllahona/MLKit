@@ -14,6 +14,7 @@
 - [ ] Unit tests for SimpleLinearRegression , PolynomialRegression, and  RidgeRegression class
 - [ ] Example Project 
 - [ ] Lasso Regression
+- [ ] Nearest Neighbors & Kernel Regression
 
 
 
