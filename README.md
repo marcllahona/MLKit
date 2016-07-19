@@ -15,7 +15,7 @@
 - [ ] Example Project 
 - [ ] Lasso Regression
 - [ ] Nearest Neighbors & Kernel Regression
-
+- [ ] More detailed README and tutorials
 
 
 
