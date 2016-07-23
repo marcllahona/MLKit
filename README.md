@@ -8,13 +8,14 @@
 - [x] Polynomial Regression (Allows for multiple features)
 - [x] Ridge Regression
 - [x] Allows for splitting your data into training, validation, and test sets. 
+- [x] K-Fold Cross Validation & Ability to test various L2 penalties for Ridge Regression
 
 ## Up Next
-- [ ] K-Fold Cross Validation & finding best L2 Penalty for RidgeRegression methods
 - [ ] Unit tests for SimpleLinearRegression , PolynomialRegression, and  RidgeRegression class
 - [ ] Example Project 
 - [ ] Lasso Regression
-
+- [ ] Nearest Neighbors & Kernel Regression
+- [ ] More detailed README and tutorials
 
 
 
