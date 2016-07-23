@@ -82,10 +82,19 @@ public class RidgeRegression {
                     derivative = getFeatureDerivative(errors, feature: feature_matrix.column(i), weight: weights.elements[i], l2_penalty: l2_penalty, feature_is_constant: true)
                 }
                 
+                var updated_step_size = step_size
+                
+                if iterations != 0 {
+                    updated_step_size = step_size/iterations
+                }else{
+                    updated_step_size = step_size
+                }
+                
                 // subtract the step size times the derivative from the current weight
-                weights.elements[i] = weights.elements[i] - (step_size * derivative)
+                weights.elements[i] = weights.elements[i] - (updated_step_size * derivative)
             }
             
+            print(weights)
             iterations = iterations + 1
         }
         
@@ -235,7 +244,7 @@ public class RidgeRegression {
     
     
     
-    public func lowestAverageValidationError(features: [Array<Float>], output: Array<Float>, list_of_test_l2Penalties:[Float], k:Float=10, step_size:Float = 1e-12) throws  -> Float {
+    public func lowestAverageValidationError(features: [Array<Float>], output: Array<Float>, list_of_test_l2Penalties:[Float], k:Float=10, step_size:Float = 0.1) throws  -> Float {
         
         // Error Handeling
         
@@ -258,7 +267,7 @@ public class RidgeRegression {
 
         for (i, l2_penalty) in list_of_test_l2Penalties.enumerate(){
             let error = kFoldCrossValidation(k, l2_penalty: l2_penalty, features: features, output: output, step_size: step_size)
-            
+            print("Error for L2 of \(l2_penalty) is: \(error)")
             if i == 0 {
                 min[0] = error
                 min[1] = l2_penalty

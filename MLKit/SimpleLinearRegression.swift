@@ -78,7 +78,7 @@ public class SimpleLinearRegression {
         while !converged {
 
             // Compute the predicted values given the current slope and intercept
-            predictions_from_training_data = getTrainingDataPredictions(inputFeature, intercept: current_intercept, slope: current_slope)
+            predictions_from_training_data = getTrainingDataPredictions(inputFeature, slope: current_slope, intercept: current_intercept)
 
             // Compute the prediction errors (prediction - Y)
             errors = subtract_predictions_from_output(predictions_from_training_data, output)
@@ -177,10 +177,10 @@ public class SimpleLinearRegression {
      - returns: The cost of your model (a.k.a The Residual Sum of Squares).
 
      */
-    public func RSS (inputFeature: Array<Float>, output: Array<Float>, intercept: Float, slope: Float) -> Float {
+    public func RSS (inputFeature: Array<Float>, output: Array<Float>, slope: Float, intercept: Float) -> Float {
         var sum = Float(0.0)
         for (i, _) in inputFeature.enumerate() {
-            let value = (output[i] - predict(intercept, slope: slope, inputValue: inputFeature[i]))
+            let value = (output[i] - predict(slope, intercept: intercept, inputValue: inputFeature[i]))
             let value_squared = value * value
             sum = sum + value_squared
         }
@@ -200,17 +200,17 @@ public class SimpleLinearRegression {
 
      - returns: A prediction (of type Float).
      */
-    public func predict (intercept: Float, slope: Float, inputValue: Float) -> Float {
+    public func predict (slope: Float, intercept: Float,  inputValue: Float) -> Float {
         let y_hat = intercept + slope * inputValue
         return y_hat
     }
 
-    func getTrainingDataPredictions (inputFeature: Array<Float>, intercept: Float, slope: Float) -> Array<Float> {
+    func getTrainingDataPredictions (inputFeature: Array<Float>, slope: Float, intercept: Float) -> Array<Float> {
 
         var predictions_from_training_data = Array<Float>()
 
         for data in inputFeature {
-            let yhat = predict(intercept, slope: slope, inputValue: data)
+            let yhat = predict(slope, intercept: intercept, inputValue: data)
             predictions_from_training_data.append(yhat)
         }
 
