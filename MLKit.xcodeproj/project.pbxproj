@@ -20,6 +20,7 @@
 		9A0DE0971D42CAF100A811C3 /* PolynomialRegressionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DE0961D42CAF100A811C3 /* PolynomialRegressionTest.swift */; };
 		9A0DE09E1D42D1BE00A811C3 /* kc.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9A0DE09B1D42D16100A811C3 /* kc.csv */; };
 		9A0DE0A41D4314ED00A811C3 /* MLDataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DE0A21D4314ED00A811C3 /* MLDataManagerTest.swift */; };
+		9A49D8A71D4C206200AA22A3 /* RidgeRegressionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A49D89D1D4C205400AA22A3 /* RidgeRegressionTest.swift */; };
 		9AEA73B71D28F05800FBCE73 /* SimpleLinearRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA73B61D28F05800FBCE73 /* SimpleLinearRegression.swift */; };
 		9AEA73EF1D28F28D00FBCE73 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA73EE1D28F28D00FBCE73 /* DataManager.swift */; };
 		9AEA73F11D28F29100FBCE73 /* PolynomialRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA73F01D28F29100FBCE73 /* PolynomialRegression.swift */; };
@@ -108,6 +109,7 @@
 		9A0DE0961D42CAF100A811C3 /* PolynomialRegressionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolynomialRegressionTest.swift; sourceTree = "<group>"; };
 		9A0DE09B1D42D16100A811C3 /* kc.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = kc.csv; path = ../kc.csv; sourceTree = "<group>"; };
 		9A0DE0A21D4314ED00A811C3 /* MLDataManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLDataManagerTest.swift; sourceTree = "<group>"; };
+		9A49D89D1D4C205400AA22A3 /* RidgeRegressionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidgeRegressionTest.swift; sourceTree = "<group>"; };
 		9AEA73B61D28F05800FBCE73 /* SimpleLinearRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleLinearRegression.swift; sourceTree = "<group>"; };
 		9AEA73EE1D28F28D00FBCE73 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9AEA73F01D28F29100FBCE73 /* PolynomialRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolynomialRegression.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				9A0DE08C1D42BFA400A811C3 /* SimpleLinearRegressionTest.swift */,
 				9A0DE0961D42CAF100A811C3 /* PolynomialRegressionTest.swift */,
 				9A0DE0A21D4314ED00A811C3 /* MLDataManagerTest.swift */,
+				9A49D89D1D4C205400AA22A3 /* RidgeRegressionTest.swift */,
 			);
 			name = Tests;
 			path = MLKitTests;
@@ -407,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A0DE0A41D4314ED00A811C3 /* MLDataManagerTest.swift in Sources */,
+				9A49D8A71D4C206200AA22A3 /* RidgeRegressionTest.swift in Sources */,
 				9A0DE0971D42CAF100A811C3 /* PolynomialRegressionTest.swift in Sources */,
 				9A0DE08D1D42BFA400A811C3 /* SimpleLinearRegressionTest.swift in Sources */,
 				9A0A2EF11D25D2F600E03946 /* MLKitTests.swift in Sources */,

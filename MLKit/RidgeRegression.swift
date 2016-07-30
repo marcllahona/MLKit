@@ -82,19 +82,11 @@ public class RidgeRegression {
                     derivative = getFeatureDerivative(errors, feature: feature_matrix.column(i), weight: weights.elements[i], l2_penalty: l2_penalty, feature_is_constant: true)
                 }
                 
-                var updated_step_size = step_size
-                
-                if iterations != 0 {
-                    updated_step_size = step_size/iterations
-                }else{
-                    updated_step_size = step_size
-                }
-                
                 // subtract the step size times the derivative from the current weight
-                weights.elements[i] = weights.elements[i] - (updated_step_size * derivative)
+                weights.elements[i] = weights.elements[i] - (step_size * derivative)
             }
             
-            print(weights)
+            //print(weights)
             iterations = iterations + 1
         }
         
@@ -139,11 +131,12 @@ public class RidgeRegression {
 
     /**
      The predict method is used for making one-time predictions by passing in an input vector and the weights you have generated
-     when fitting your model (using the fit() method).
+     when fitting your model (using the fit() method). Make sure your first feature is the constant 1 for the intercept.
      
      - parameter input_vector: An array of input (depends on how many features you used to fit your model)
      - parameter weights: An array of your weights. This can be obtained by fitting your model before getting a prediction.
      - returns: A prediction (of type Float).
+     
      */
     public func predict(input_vector: ValueArray<Float>, your_weights: ValueArray<Float>) -> Float {
         
