@@ -9,10 +9,9 @@ MLKit is a simple machine learning framework written in Swift. Currently MLKit f
 - [x] Ridge Regression
 - [x] Allows for splitting your data into training, validation, and test sets. 
 - [x] K-Fold Cross Validation & Ability to test various L2 penalties for Ridge Regression
-- [x] Unit tests for SimpleLinearRegression, PolynomialRegression, and MLDatamanager classes 
+- [x] Unit tests for SimpleLinearRegression, PolynomialRegression, RidgeRegression and MLDatamanager classes 
 
 ## Up Next
-- [ ] Unit tests for RidgeRegression class
 - [ ] Lasso Regression
 - [ ] Example Project 
 - [ ] More detailed README and tutorials
