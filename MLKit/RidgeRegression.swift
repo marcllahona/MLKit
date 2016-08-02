@@ -12,8 +12,8 @@ import Upsurge
 
 public class RidgeRegression {
     
-    public var cost_function_result:Float!
-    public var final_weights: Matrix<Float>!
+    private var cost_function_result:Float!
+    private var final_weights: Matrix<Float>!
     
     public init() {
         cost_function_result = 0.0
@@ -21,7 +21,7 @@ public class RidgeRegression {
     
     
     /**
-     The fit method fits your model and returns your regression coefficients/weights. The methods applies gradient descent
+     The fit method fits/trains your model and returns your regression coefficients/weights. The methods applies gradient descent
      as a means to find the most optimal regression coefficients for your model.
      
      - parameter features: An array of all of your features.
@@ -32,7 +32,7 @@ public class RidgeRegression {
      
      - returns: A Matrix of type Float consisting your regression coefficients/weights.
      */
-    public func fit(features: [Array<Float>], output: Array<Float>, initial_weights: Matrix<Float>, step_size: Float, l2_penalty:Float, max_iterations:Float = 100) throws -> Matrix<Float> {
+    public func train(features: [Array<Float>], output: Array<Float>, initial_weights: Matrix<Float>, step_size: Float, l2_penalty:Float, max_iterations:Float = 100) throws -> Matrix<Float> {
         
         // Error Handeling
         
@@ -215,7 +215,7 @@ public class RidgeRegression {
             let initial_weights = Matrix<Float>(rows: training_set.count+1, columns: 1, elements: [Float](count: training_set.count+1, repeatedValue: 0.0))
             var k_fold_weights :Matrix<Float>!
             let ridgeModel = RidgeRegression()
-            k_fold_weights = try! ridgeModel.fit(training_set, output: output_of_training_set, initial_weights: initial_weights, step_size: step_size, l2_penalty: l2_penalty)
+            k_fold_weights = try! ridgeModel.train(training_set, output: output_of_training_set, initial_weights: initial_weights, step_size: step_size, l2_penalty: l2_penalty)
 
             // First get the predictions
             let y_actual:Array<Float> = Array(output[start...end])
@@ -274,11 +274,25 @@ public class RidgeRegression {
         return min[1]
     }
     
+    /**
+     The getCostFunctionResult function returns your cost function result (RSS).
+     */
+    public func getCostFunctionResult() -> Float{
+        return self.cost_function_result
+    }
     
+    /**
+     The getWeightsAsMatrix function returns your weights.
+     */
+    public func getWeightsAsMatrix() -> Matrix<Float> {
+        return self.final_weights
+    }
     
-    
-    
-    
-    
+    /**
+     The getWeightsAsValueArray function returns a value array that contains your weights.
+     */
+    public func getWeightsAsValueArray() -> ValueArray<Float> {
+        return self.final_weights.elements
+    }
     
 }

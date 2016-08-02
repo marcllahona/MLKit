@@ -200,6 +200,14 @@ public class MLDataManager {
 
         return features
     }
+    
+    
+    public static func normalizeFeatures(features: [Array<Float>], output: Array<Float>) -> Matrix<Float>{
+        let feature_matrix_and_output = dataToMatrix(features, output: output)
+        let normalized_features = transpose(normalize(feature_matrix_and_output.0))
+        
+        return normalized_features
+    }
 
 }
 

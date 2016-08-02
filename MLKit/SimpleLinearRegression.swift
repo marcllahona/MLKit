@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import Upsurge
 
 public class SimpleLinearRegression {
 
-    public var slope: Float!
-    public var intercept: Float!
-    public var cost_function_result: Float!
+    private var slope: Float!
+    private var intercept: Float!
+    private var cost_function_result: Float!
 
     public init() {
         slope = 0.0
@@ -21,7 +22,7 @@ public class SimpleLinearRegression {
     }
 
     /**
-     The fitUsingGradientDescent method fits your model (that consists of one feature and one output array) and returns your regression coefficients/weights. The methods applies gradient descent
+     The fitUsingGradientDescent method fits/trains your model (that consists of one feature and one output array) and returns your regression coefficients/weights. The methods applies gradient descent
      as a means to find the most optimal regression coefficients for your model.
 
      - parameter inputFeature: An array of your feature. Only 1 feature is allowed. This class is used for simple experiments in which only 1 feature is allowed.
@@ -31,7 +32,7 @@ public class SimpleLinearRegression {
 
      - returns: A tuple of your slope and intercept (your regression coefficients).
      */
-    public func fitUsingGradientDescent (inputFeature: Array<Float>, output: Array<Float>, step_size: Float, tolerance: Float) throws -> (Float, Float) {
+    public func train(inputFeature: Array<Float>, output: Array<Float>, step_size: Float, tolerance: Float) throws -> (Float, Float) {
 
         if (inputFeature.count != output.count) {
 
@@ -84,13 +85,13 @@ public class SimpleLinearRegression {
             errors = subtract_predictions_from_output(predictions_from_training_data, output)
 
             // Update the intercept
-            sum_of_errors = MLDataManager.sumUpData(errors)
+            sum_of_errors = sum(errors)
             adjustment_for_intercept = step_size * sum_of_errors
             current_intercept = current_intercept - adjustment_for_intercept
 
             // Update the slope
             let error_input_arr = find_product_of_error_and_input()
-            error_and_input_sum = MLDataManager.sumUpData(error_input_arr)
+            error_and_input_sum = sum(error_input_arr)
             adjustment_for_slope = step_size * error_and_input_sum
             current_slope = current_slope - adjustment_for_slope
 
@@ -113,14 +114,14 @@ public class SimpleLinearRegression {
     }
 
     /**
-     The fitUsingNoGradientDescent method fits your model by taking the derivative of the residual sum of squares formula (An .md file with the intuition behind this approach will be provided soon) and solves for your regression coefficients.
+     The fitUsingNoGradientDescent method fits/trains your model by taking the derivative of the residual sum of squares formula (An .md file with the intuition behind this approach will be provided soon) and solves for your regression coefficients.
 
      - parameter inputFeature: An array of your feature. Only 1 feature is allowed. This class is used for simple experiments in which only 1 feature is allowed.
      - parameter output: An array of your observations/output.
 
      - returns: A tuple of your slope and intercept (your regression coefficients).
      */
-    public func fitUsingNoGradientDescent (inputFeature: Array<Float>, output: Array<Float>) -> (Float, Float) {
+    public func train(inputFeature: Array<Float>, output: Array<Float>) -> (Float, Float) {
 
         if (inputFeature.count == 0 || output.count == 0) {
             print("You need to have 1 feature array and 1 output array to utilize this function.")
@@ -134,14 +135,14 @@ public class SimpleLinearRegression {
         }
 
         // The sum over all of our observations/output (y)
-        let y_sub_i = MLDataManager.sumUpData(output)
+        let y_sub_i = sum(output)
 
         // The sum over all of our input data (x)
-        let x_sub_i = MLDataManager.sumUpData(inputFeature)
+        let x_sub_i = sum(inputFeature)
 
         // The sum over all of our input data squared
         let data_squared = inputFeature.map { $0 * $0 }
-        let x_sub_i_squared = MLDataManager.sumUpData(data_squared)
+        let x_sub_i_squared = sum(data_squared)
 
         // The sum over all of our input data and output data
         var input_and_output_multiplied: Array<Float> = []
@@ -149,7 +150,7 @@ public class SimpleLinearRegression {
             let value = element * output[i]
             input_and_output_multiplied.append(value)
         }
-        let x_sub_i_y_sub_i = MLDataManager.sumUpData(input_and_output_multiplied)
+        let x_sub_i_y_sub_i = sum(input_and_output_multiplied)
 
         // Calculate the slope (w1)
         let numerator = x_sub_i_y_sub_i - (Float(1.0) / Float(inputFeature.count)) * (y_sub_i * x_sub_i)
@@ -157,7 +158,7 @@ public class SimpleLinearRegression {
         let slope = numerator / denominator
 
         // Calculate the intercept
-        let intercept = MLDataManager.mean(output) - slope * MLDataManager.mean(inputFeature)
+        let intercept = mean(output) - slope * mean(inputFeature)
 
         // Save the current slope and intercept
         self.slope = slope
@@ -216,5 +217,22 @@ public class SimpleLinearRegression {
 
         return predictions_from_training_data
     }
+    
+    
+    /** 
+     The getRegressionCoefficients function returns your slope and intercept.
+    */
+    public func getRegressionCoefficients() -> (Float,Float) {
+        return (self.slope, self.intercept)
+    }
+    
+    /** 
+        The getCostFunctionResult function returns your cost function result (RSS).
+    */
+    public func getCostFunctionResult() -> Float{
+        return self.cost_function_result
+    }
+
+    
 }
 

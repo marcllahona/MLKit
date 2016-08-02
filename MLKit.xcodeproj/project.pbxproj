@@ -15,12 +15,14 @@
 		9A0A2EEC1D25D2F600E03946 /* MLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0A2EE11D25D2F600E03946 /* MLKit.framework */; };
 		9A0A2EF11D25D2F600E03946 /* MLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A2EF01D25D2F600E03946 /* MLKitTests.swift */; };
 		9A0A2F261D25D65D00E03946 /* SwiftCSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0A2F071D25D4E700E03946 /* SwiftCSV.framework */; };
-		9A0A2F271D25D66000E03946 /* Upsurge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0A2F181D25D4ED00E03946 /* Upsurge.framework */; };
 		9A0DE08D1D42BFA400A811C3 /* SimpleLinearRegressionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DE08C1D42BFA400A811C3 /* SimpleLinearRegressionTest.swift */; };
 		9A0DE0971D42CAF100A811C3 /* PolynomialRegressionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DE0961D42CAF100A811C3 /* PolynomialRegressionTest.swift */; };
 		9A0DE09E1D42D1BE00A811C3 /* kc.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9A0DE09B1D42D16100A811C3 /* kc.csv */; };
 		9A0DE0A41D4314ED00A811C3 /* MLDataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DE0A21D4314ED00A811C3 /* MLDataManagerTest.swift */; };
 		9A49D8A71D4C206200AA22A3 /* RidgeRegressionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A49D89D1D4C205400AA22A3 /* RidgeRegressionTest.swift */; };
+		9A49D8B51D4D500000AA22A3 /* LassoRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A49D8B41D4D500000AA22A3 /* LassoRegression.swift */; };
+		9A49D8D31D5029E200AA22A3 /* Upsurge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A49D8CC1D5029DB00AA22A3 /* Upsurge.framework */; };
+		9A49D8D61D502CDD00AA22A3 /* LassoRegressionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A49D8D41D502CD000AA22A3 /* LassoRegressionTest.swift */; };
 		9AEA73B71D28F05800FBCE73 /* SimpleLinearRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA73B61D28F05800FBCE73 /* SimpleLinearRegression.swift */; };
 		9AEA73EF1D28F28D00FBCE73 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA73EE1D28F28D00FBCE73 /* DataManager.swift */; };
 		9AEA73F11D28F29100FBCE73 /* PolynomialRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA73F01D28F29100FBCE73 /* PolynomialRegression.swift */; };
@@ -48,44 +50,44 @@
 			remoteGlobalIDString = 3D1E59BF1945FFAD001CF760;
 			remoteInfo = SwiftCSVTests;
 		};
-		9A0A2F131D25D4ED00E03946 /* PBXContainerItemProxy */ = {
+		9A49D8C71D5029DB00AA22A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */;
+			containerPortal = 9A49D8BE1D5029DB00AA22A3 /* Upsurge.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 614ACA701BD1CB7B00A1C13E;
 			remoteInfo = "Upsurge OSX";
 		};
-		9A0A2F151D25D4ED00E03946 /* PBXContainerItemProxy */ = {
+		9A49D8C91D5029DB00AA22A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */;
+			containerPortal = 9A49D8BE1D5029DB00AA22A3 /* Upsurge.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 614ACA7A1BD1CB7B00A1C13E;
 			remoteInfo = "UpsurgeTests OSX";
 		};
-		9A0A2F171D25D4ED00E03946 /* PBXContainerItemProxy */ = {
+		9A49D8CB1D5029DB00AA22A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */;
+			containerPortal = 9A49D8BE1D5029DB00AA22A3 /* Upsurge.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 614ACACA1BD1CBF300A1C13E;
 			remoteInfo = "Upsurge iOS";
 		};
-		9A0A2F191D25D4ED00E03946 /* PBXContainerItemProxy */ = {
+		9A49D8CD1D5029DB00AA22A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */;
+			containerPortal = 9A49D8BE1D5029DB00AA22A3 /* Upsurge.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 614ACAD31BD1CBF300A1C13E;
 			remoteInfo = "UpsurgeTests iOS";
 		};
-		9A0A2F1B1D25D4ED00E03946 /* PBXContainerItemProxy */ = {
+		9A49D8CF1D5029DB00AA22A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */;
+			containerPortal = 9A49D8BE1D5029DB00AA22A3 /* Upsurge.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 61D0466D1C48BA5B00DB7279;
 			remoteInfo = "Upsurge tvOS";
 		};
-		9A0A2F1D1D25D4ED00E03946 /* PBXContainerItemProxy */ = {
+		9A49D8D11D5029DB00AA22A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */;
+			containerPortal = 9A49D8BE1D5029DB00AA22A3 /* Upsurge.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 61D046761C48BA5B00DB7279;
 			remoteInfo = "UpsurgeTests tvOS";
@@ -104,12 +106,14 @@
 		9A0A2EF01D25D2F600E03946 /* MLKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLKitTests.swift; sourceTree = "<group>"; };
 		9A0A2EF21D25D2F600E03946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A0A2F011D25D4E700E03946 /* SwiftCSV.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftCSV.xcodeproj; path = Carthage/Checkouts/SwiftCSV/SwiftCSV.xcodeproj; sourceTree = "<group>"; };
-		9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Upsurge.xcodeproj; path = Carthage/Checkouts/Upsurge/Upsurge.xcodeproj; sourceTree = "<group>"; };
 		9A0DE08C1D42BFA400A811C3 /* SimpleLinearRegressionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleLinearRegressionTest.swift; sourceTree = "<group>"; };
 		9A0DE0961D42CAF100A811C3 /* PolynomialRegressionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolynomialRegressionTest.swift; sourceTree = "<group>"; };
 		9A0DE09B1D42D16100A811C3 /* kc.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = kc.csv; path = ../kc.csv; sourceTree = "<group>"; };
 		9A0DE0A21D4314ED00A811C3 /* MLDataManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLDataManagerTest.swift; sourceTree = "<group>"; };
 		9A49D89D1D4C205400AA22A3 /* RidgeRegressionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidgeRegressionTest.swift; sourceTree = "<group>"; };
+		9A49D8B41D4D500000AA22A3 /* LassoRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LassoRegression.swift; sourceTree = "<group>"; };
+		9A49D8BE1D5029DB00AA22A3 /* Upsurge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Upsurge.xcodeproj; path = "../../Downloads/Upsurge-master 2/Upsurge.xcodeproj"; sourceTree = "<group>"; };
+		9A49D8D41D502CD000AA22A3 /* LassoRegressionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LassoRegressionTest.swift; sourceTree = "<group>"; };
 		9AEA73B61D28F05800FBCE73 /* SimpleLinearRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleLinearRegression.swift; sourceTree = "<group>"; };
 		9AEA73EE1D28F28D00FBCE73 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9AEA73F01D28F29100FBCE73 /* PolynomialRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolynomialRegression.swift; sourceTree = "<group>"; };
@@ -120,7 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A0A2F271D25D66000E03946 /* Upsurge.framework in Frameworks */,
+				9A49D8D31D5029E200AA22A3 /* Upsurge.framework in Frameworks */,
 				9A0A2F261D25D65D00E03946 /* SwiftCSV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +167,7 @@
 				9A05A6381D2DE0FE0003E131 /* NumericTypeProtocol.swift */,
 				9A05A6421D2DE19E0003E131 /* Extensions.swift */,
 				9A05A68E1D3323750003E131 /* RidgeRegression.swift */,
+				9A49D8B41D4D500000AA22A3 /* LassoRegression.swift */,
 				9AEA73B61D28F05800FBCE73 /* SimpleLinearRegression.swift */,
 				9AEA73F01D28F29100FBCE73 /* PolynomialRegression.swift */,
 				9A0A2EE41D25D2F600E03946 /* MLKit.h */,
@@ -181,6 +186,7 @@
 				9A0DE0961D42CAF100A811C3 /* PolynomialRegressionTest.swift */,
 				9A0DE0A21D4314ED00A811C3 /* MLDataManagerTest.swift */,
 				9A49D89D1D4C205400AA22A3 /* RidgeRegressionTest.swift */,
+				9A49D8D41D502CD000AA22A3 /* LassoRegressionTest.swift */,
 			);
 			name = Tests;
 			path = MLKitTests;
@@ -195,26 +201,26 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9A0A2F0B1D25D4ED00E03946 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9A0A2F141D25D4ED00E03946 /* Upsurge.framework */,
-				9A0A2F161D25D4ED00E03946 /* UpsurgeTests OSX.xctest */,
-				9A0A2F181D25D4ED00E03946 /* Upsurge.framework */,
-				9A0A2F1A1D25D4ED00E03946 /* UpsurgeTests iOS.xctest */,
-				9A0A2F1C1D25D4ED00E03946 /* Upsurge.framework */,
-				9A0A2F1E1D25D4ED00E03946 /* UpsurgeTests tvOS.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		9A0A2F291D25D6A200E03946 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */,
+				9A49D8BE1D5029DB00AA22A3 /* Upsurge.xcodeproj */,
 				9A0A2F011D25D4E700E03946 /* SwiftCSV.xcodeproj */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A49D8BF1D5029DB00AA22A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A49D8C81D5029DB00AA22A3 /* Upsurge.framework */,
+				9A49D8CA1D5029DB00AA22A3 /* UpsurgeTests OSX.xctest */,
+				9A49D8CC1D5029DB00AA22A3 /* Upsurge.framework */,
+				9A49D8CE1D5029DB00AA22A3 /* UpsurgeTests iOS.xctest */,
+				9A49D8D01D5029DB00AA22A3 /* Upsurge.framework */,
+				9A49D8D21D5029DB00AA22A3 /* UpsurgeTests tvOS.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,8 +307,8 @@
 					ProjectRef = 9A0A2F011D25D4E700E03946 /* SwiftCSV.xcodeproj */;
 				},
 				{
-					ProductGroup = 9A0A2F0B1D25D4ED00E03946 /* Products */;
-					ProjectRef = 9A0A2F0A1D25D4ED00E03946 /* Upsurge.xcodeproj */;
+					ProductGroup = 9A49D8BF1D5029DB00AA22A3 /* Products */;
+					ProjectRef = 9A49D8BE1D5029DB00AA22A3 /* Upsurge.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -328,46 +334,46 @@
 			remoteRef = 9A0A2F081D25D4E700E03946 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A0A2F141D25D4ED00E03946 /* Upsurge.framework */ = {
+		9A49D8C81D5029DB00AA22A3 /* Upsurge.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Upsurge.framework;
-			remoteRef = 9A0A2F131D25D4ED00E03946 /* PBXContainerItemProxy */;
+			remoteRef = 9A49D8C71D5029DB00AA22A3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A0A2F161D25D4ED00E03946 /* UpsurgeTests OSX.xctest */ = {
+		9A49D8CA1D5029DB00AA22A3 /* UpsurgeTests OSX.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "UpsurgeTests OSX.xctest";
-			remoteRef = 9A0A2F151D25D4ED00E03946 /* PBXContainerItemProxy */;
+			remoteRef = 9A49D8C91D5029DB00AA22A3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A0A2F181D25D4ED00E03946 /* Upsurge.framework */ = {
+		9A49D8CC1D5029DB00AA22A3 /* Upsurge.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Upsurge.framework;
-			remoteRef = 9A0A2F171D25D4ED00E03946 /* PBXContainerItemProxy */;
+			remoteRef = 9A49D8CB1D5029DB00AA22A3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A0A2F1A1D25D4ED00E03946 /* UpsurgeTests iOS.xctest */ = {
+		9A49D8CE1D5029DB00AA22A3 /* UpsurgeTests iOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "UpsurgeTests iOS.xctest";
-			remoteRef = 9A0A2F191D25D4ED00E03946 /* PBXContainerItemProxy */;
+			remoteRef = 9A49D8CD1D5029DB00AA22A3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A0A2F1C1D25D4ED00E03946 /* Upsurge.framework */ = {
+		9A49D8D01D5029DB00AA22A3 /* Upsurge.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Upsurge.framework;
-			remoteRef = 9A0A2F1B1D25D4ED00E03946 /* PBXContainerItemProxy */;
+			remoteRef = 9A49D8CF1D5029DB00AA22A3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A0A2F1E1D25D4ED00E03946 /* UpsurgeTests tvOS.xctest */ = {
+		9A49D8D21D5029DB00AA22A3 /* UpsurgeTests tvOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "UpsurgeTests tvOS.xctest";
-			remoteRef = 9A0A2F1D1D25D4ED00E03946 /* PBXContainerItemProxy */;
+			remoteRef = 9A49D8D11D5029DB00AA22A3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -398,6 +404,7 @@
 				9A05A6431D2DE19E0003E131 /* Extensions.swift in Sources */,
 				9AEA73F11D28F29100FBCE73 /* PolynomialRegression.swift in Sources */,
 				9A05A68F1D3323750003E131 /* RidgeRegression.swift in Sources */,
+				9A49D8B51D4D500000AA22A3 /* LassoRegression.swift in Sources */,
 				9A05A6931D3345C10003E131 /* RegressionErrorEnum.swift in Sources */,
 				9AEA73B71D28F05800FBCE73 /* SimpleLinearRegression.swift in Sources */,
 				9AEA73EF1D28F28D00FBCE73 /* DataManager.swift in Sources */,
@@ -410,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A0DE0A41D4314ED00A811C3 /* MLDataManagerTest.swift in Sources */,
+				9A49D8D61D502CDD00AA22A3 /* LassoRegressionTest.swift in Sources */,
 				9A49D8A71D4C206200AA22A3 /* RidgeRegressionTest.swift in Sources */,
 				9A0DE0971D42CAF100A811C3 /* PolynomialRegressionTest.swift in Sources */,
 				9A0DE08D1D42BFA400A811C3 /* SimpleLinearRegressionTest.swift in Sources */,

@@ -19,7 +19,7 @@ class SimpleLinearRegressionTests: XCTestCase {
 
         let model = SimpleLinearRegression()
 
-        let weights = model.fitUsingNoGradientDescent(dataset, output: output)
+        let weights = model.train(dataset, output: output)
 
         let actual = (Float(5.0), Float(-1.0))
 
@@ -31,7 +31,7 @@ class SimpleLinearRegressionTests: XCTestCase {
     func testFitGradientDescent() {
         let model = SimpleLinearRegression()
 
-        let weights = try! model.fitUsingGradientDescent(dataset, output: output, step_size: 0.05, tolerance: 0.01)
+        let weights = try! model.train(dataset, output: output, step_size: 0.05, tolerance: 0.01)
 
         let actual = (Float(4.99797), Float(-0.994207))
 
@@ -44,7 +44,7 @@ class SimpleLinearRegressionTests: XCTestCase {
         let model = SimpleLinearRegression()
 
         // First we fit our model
-        let weights = try! model.fitUsingGradientDescent(dataset, output: output, step_size: 0.05, tolerance: 0.01)
+        let weights = try! model.train(dataset, output: output, step_size: 0.05, tolerance: 0.01)
 
         // Then we can use the cost function
         let rss = model.RSS(dataset, output: output, slope: weights.0, intercept: weights.1)
@@ -61,7 +61,7 @@ class SimpleLinearRegressionTests: XCTestCase {
         let model = SimpleLinearRegression()
 
         // First we fit our model
-        let weights = try! model.fitUsingGradientDescent(dataset, output: output, step_size: 0.05, tolerance: 0.01)
+        let weights = try! model.train(dataset, output: output, step_size: 0.05, tolerance: 0.01)
 
         // Make one-time prediction
         let quickPrediction = model.predict(weights.0, intercept: weights.1, inputValue: 2)

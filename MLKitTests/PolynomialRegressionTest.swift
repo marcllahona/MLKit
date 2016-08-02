@@ -40,7 +40,7 @@ class PolynomialRegressionTests: XCTestCase {
         let initial_weights = Matrix<Float>(rows: 3, columns: 1, elements: [-100000.0, 1.0, 1.0])
 
         // Fit the model and obtain the weights
-        let weights = try! polynomialModel.fit([training_data, training_data_2], output: output_data, initial_weights: initial_weights, step_size: Float(4e-12), tolerance: Float(1e9))
+        let weights = try! polynomialModel.train([training_data, training_data_2], output: output_data, initial_weights: initial_weights, step_size: Float(4e-12), tolerance: Float(1e9))
 
         let actualWeights = Matrix<Float>(rows: 3, columns: 1, elements: [-99999.9, 303.321, 1.42297])
 
@@ -74,7 +74,7 @@ class PolynomialRegressionTests: XCTestCase {
         let initial_weights = Matrix<Float>(rows: 3, columns: 1, elements: [-100000.0, 1.0, 1.0])
 
         // Fit the model and obtain the weights
-        let weights = try! polynomialModel.fit([training_data, training_data_2], output: output_data, initial_weights: initial_weights, step_size: Float(4e-12), tolerance: Float(1e9))
+        let weights = try! polynomialModel.train([training_data, training_data_2], output: output_data, initial_weights: initial_weights, step_size: Float(4e-12), tolerance: Float(1e9))
 
         // Compute RSS
         let rss = try! polynomialModel.RSS([training_data, training_data_2], observation: output_data)
@@ -111,7 +111,7 @@ class PolynomialRegressionTests: XCTestCase {
         let initial_weights = Matrix<Float>(rows: 3, columns: 1, elements: [-100000.0, 1.0, 1.0])
 
         // Fit the model and obtain the weights
-        let weights = try! polynomialModel.fit([training_data, training_data_2], output: output_data, initial_weights: initial_weights, step_size: Float(4e-12), tolerance: Float(1e9))
+        let weights = try! polynomialModel.train([training_data, training_data_2], output: output_data, initial_weights: initial_weights, step_size: Float(4e-12), tolerance: Float(1e9))
 
         // Make a prediction
         let quickPrediction = polynomialModel.predict([Float(1.0), Float(1180.0), Float(1.0)], your_weights: weights.elements)

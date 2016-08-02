@@ -36,7 +36,7 @@ class RidgeRegressionTests: XCTestCase {
         let initial_weights = Matrix<Float>(rows: 2, columns: 1, elements: [0.0, 0.0])
 
         // Fit the model and obtain the weights
-        let weights = try! ridgeModel.fit([training_data], output: output_data, initial_weights: initial_weights, step_size: Float(1e-12), l2_penalty: 0.0, max_iterations: 1000)
+        let weights = try! ridgeModel.train([training_data], output: output_data, initial_weights: initial_weights, step_size: Float(1e-12), l2_penalty: 0.0, max_iterations: 1000)
 
         let actualWeights: ValueArray<Float> = [-0.201522, 263.089]
 
@@ -66,7 +66,7 @@ class RidgeRegressionTests: XCTestCase {
         let initial_weights = Matrix<Float>(rows: 2, columns: 1, elements: [0.0, 0.0])
 
         // Fit the model and obtain the weights
-        _ = try! ridgeModel.fit([training_data], output: output_data, initial_weights: initial_weights, step_size: Float(1e-12), l2_penalty: 0.0, max_iterations: 1000)
+        _ = try! ridgeModel.train([training_data], output: output_data, initial_weights: initial_weights, step_size: Float(1e-12), l2_penalty: 0.0, max_iterations: 1000)
 
         // Calculate RSS
         let RSS = try! ridgeModel.RSS([training_data], observation: output_data)
@@ -100,7 +100,7 @@ class RidgeRegressionTests: XCTestCase {
         let initial_weights = Matrix<Float>(rows: 2, columns: 1, elements: [0.0, 0.0])
         
         // Fit the model and obtain the weights
-        let weights = try! ridgeModel.fit([training_data], output: output_data, initial_weights: initial_weights, step_size: Float(1e-12), l2_penalty: 0.0, max_iterations: 1000)
+        let weights = try! ridgeModel.train([training_data], output: output_data, initial_weights: initial_weights, step_size: Float(1e-12), l2_penalty: 0.0, max_iterations: 1000)
         
         // Make a prediction
         let quickPrediction = ridgeModel.predict([Float(1.0), Float(1.18000000e+03)], your_weights: weights.elements)
