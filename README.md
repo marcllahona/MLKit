@@ -17,7 +17,8 @@ MLKit is a simple machine learning framework written in Swift. Currently MLKit f
 - [ ] Example Project 
 - [ ] More detailed README and tutorials
 
-
+## Code Snippets / Tutorials
+For tutorials and code snippets please read the [wiki](https://github.com/Somnibyte/MLKit/wiki). 
 
 # License
 MIT License
